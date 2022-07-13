@@ -22,5 +22,6 @@
     </ul>
     <hr>
   </div>
+  {{ if .Params.mathjax }}{{ partial "mathjax_support.html" . }}{{ end }}
 </header>
 
