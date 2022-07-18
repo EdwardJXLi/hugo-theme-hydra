@@ -45,4 +45,7 @@
   {{ if .Site.Config.Services.GoogleAnalytics.ID }}
     {{ template "_internal/google_analytics.html" . }}
   {{ end }}
+  {{ if .Site.Params.plausibleAnalytics }}
+  <script defer data-domain={{ .Site.Params.plausibleAnalytics }} src="https://plausible.io/js/plausible.js"></script>
+  {{ end }}
 </head>
