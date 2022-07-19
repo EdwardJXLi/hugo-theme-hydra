@@ -42,13 +42,14 @@
     {{ printf `<link href="%s" rel="%s" type="%s" title="%s" />` .Permalink .Rel .MediaType.Type $.Site.Title | safeHTML }}
   {{ end }}
   {{ end }}
-  <!-- {{ if hugo.IsProduction }} -->
+  
+  {{ if hugo.IsProduction }}
   {{ if .Site.Config.Services.GoogleAnalytics.ID }}
     {{ template "_internal/google_analytics.html" . }}
   {{ end }}
   {{ end }}
   {{ if .Site.Params.plausibleDomain }}
-  <script defer data-domain={{ .Site.Params.plausibleDomain }} src="{{ .Site.Params.plausibleURL }}/js/plausible.js"></script>
+  <script defer data-domain={{ .Site.Params.plausibleDomain }} data-api={{ .Site.Params.plausibleDataAPI }} src={{ .Site.Params.plausibleURL }} ></script>
   {{ end }}
-  <!-- {{ end }} -->
+  {{ end }}
 </head>
