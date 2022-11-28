@@ -302,31 +302,6 @@ TODO: Customizable copyright year
 copyright = "Zeran Wu" # cactus theme will use site title if copyright is not set
 ```
 
-### Comments
-
-Comments are disabled by default. Enable comments in your `.Site.Params`.
-```toml
-[params]
-  [params.comments]
-    enabled = true
-    # engine = "disqus" # in progress
-```
-
-You can also enable/disable comments per post. In your posts' front matter, add:
-```yaml
-comments: true
-```
-
-The site config is ignored when the `comments` option exists in front matter.
-
-The default engine is disqus. **By now only disqus is supported in cactus.** I will add more options sooner or later. See [Comments Alternatives](https://gohugo.io/content-management/comments/#comments-alternatives)
-
-Before using disqus, you need to register and get your [disqus shortname](https://help.disqus.com/en/articles/1717111-what-s-a-shortname). Assign your shortname in `.Site.disqusShortname`, or cactus will use `.Site.Title` by default.
-
-```
-disqusShortname = "wzr" # hydra will use site title if not set
-```
-
 ### Highlight
 
 Use Hugo's built-in [syntax highlighting](https://gohugo.io/getting-started/configuration-markup#highlight).
