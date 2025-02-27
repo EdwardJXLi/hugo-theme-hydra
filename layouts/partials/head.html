@@ -19,8 +19,18 @@
   {{ end }}
   {{ $colortheme := .Scratch.Get "colortheme" }}
 
-  {{- $options := (dict "targetPath" "css/styles.css" "outputStyle" "compressed" "enableSourceMap" "true") -}}
-  {{- $styles := resources.Get "scss/style.scss" | resources.ExecuteAsTemplate "scss/style.scss" . | css.Sass $options | resources.Fingerprint "sha512" }}
+  {{- $options := dict
+    "targetPath" "css/styles.css"
+    "outputStyle" "compressed"
+    "enableSourceMap" "true"
+  -}}
+  {{ $styles :=
+    resources.Get "scss/style.scss"
+    | resources.ExecuteAsTemplate "style.main.scss" .
+    | toCSS $options
+    | minify
+    | fingerprint
+  }}
   <link rel="stylesheet" href="{{ $styles.Permalink }}" integrity="{{ $styles.Data.Integrity }}"> 
 
   <!-- Custom CSS -->
