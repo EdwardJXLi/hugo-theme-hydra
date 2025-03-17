@@ -6,6 +6,12 @@
 
   {{ partial "header.html" . }}
 
+  {{ if .IsSection }}
+  <div id="archive">
+    {{ partial "post-list.html" . }}
+  </div>
+  {{ else }}
+
   <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
     <header>
       <h1 class="posttitle" itemprop="name headline">
@@ -82,6 +88,8 @@
   {{ partial "comments.html" . }}
 
   {{ partial "page_nav_mobile.html" . }}
+
+  {{ end }}
 
   {{ partial "footer.html" . }}
 

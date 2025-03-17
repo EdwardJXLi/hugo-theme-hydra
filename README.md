@@ -36,3 +36,4 @@ TODO
 - Update FontAwesome
 - Customizable category icon
 - Move post-list to partial layout
+- Added default post-list rendering for post layout
