@@ -37,3 +37,4 @@ TODO
 - Customizable category icon
 - Move post-list to partial layout
 - Added default post-list rendering for post layout
+- Add titles to list and terms layout

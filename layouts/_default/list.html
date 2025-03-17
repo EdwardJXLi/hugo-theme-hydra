@@ -1,5 +1,6 @@
 {{ define "main"}}
 <div id="archive">
+  <h1>{{ .Title | title }} </h1>
   {{ partial "post-list.html" . }}
 </div>
 {{ end }}
