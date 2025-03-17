@@ -34,3 +34,4 @@ TODO
 - Remove "Categories" property (plural)
 - Added "Category" property (singular)
 - Update FontAwesome
+- Customizable category icon

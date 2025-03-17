@@ -40,7 +40,11 @@
         {{ end }}
         {{ if .Params.category }}
         <div class="article-category">
+            {{ if .Params.categoryIcon }}
+            <i class="fas {{ .Params.categoryIcon }}"></i>
+            {{ else }}
             <i class="fas fa-archive"></i>
+            {{ end }}
             <a class="category-link" href="/{{ .Params.category | urlize }}">{{ .Params.category }}</a>
         </div>
         {{ end }}
