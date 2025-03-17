@@ -1,5 +1,5 @@
 <header id="header">
-  <a href="{{ .Site.BaseURL }}">
+  <a href="/{{ .Params.category }}">
   {{ if (isset .Params "categoryheaderlogo" ) }}
   <div id="logo" style="background-image: url({{ .Params.categoryHeaderLogo | absURL }})"></div>
   {{ else if (isset .Site.Params "gravatar") }}
@@ -11,15 +11,20 @@
   {{ end}}
   
   <div id="title">
-    {{ if (isset .Params "categoryheadertitle" ) }}
-    <h1>{{ .Params.categoryHeaderTitle }}</h1>
-    {{ else }}
-    <h1>{{ .Site.Title }}</h1>
-    {{ end }}
+      <a href="{{ .Site.BaseURL }}">
+      {{ if (isset .Params "categoryheadertitle" ) }}
+      <h1>{{ .Params.categoryHeaderTitle }}</h1>
+      {{ else }}
+      <h1>{{ .Site.Title }}</h1>
+      {{ end }}
+    </a>
 
     {{ if (isset .Params "categoryheadersubtitle" ) }}
-    <a href="/{{ .Params.category }}"><h2 id="subtitle">{{ .Params.categoryHeaderSubtitle }}</h2></a>
+    <a href="/{{ .Params.category }}">
+      <h2 id="subtitle">{{ .Params.categoryHeaderSubtitle }}</h2>
+    </a>
     {{ end }}
+    
   </div>
   </a>
   <div id="nav">
