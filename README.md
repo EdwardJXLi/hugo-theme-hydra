@@ -39,3 +39,4 @@ TODO
 - Move post-list to partial layout
 - Added default post-list rendering for post layout
 - Add titles to list and terms layout
+- Added hr bar to title
