@@ -33,3 +33,4 @@ TODO
 - Swapped tags page to use list format
 - Remove "Categories" property (plural)
 - Added "Category" property (singular)
+- Update FontAwesome
