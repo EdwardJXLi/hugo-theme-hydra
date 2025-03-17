@@ -23,6 +23,7 @@ TODO
 
 ## Misc Changes
 - Changes colors and themes
+- Adjusted SCSS/CSS styling
 - Made post layout an explicit `post.html` default layout
 - Removed example site and github workflows
 - Fix `resources.ToCSS` deprecation
