@@ -93,7 +93,7 @@
 @media screen and (max-width: 480px) {
   #header #title {
     display: table;
-    margin-right: 5rem;
+    margin-right: 3rem;
     min-height: $logo-height;
     // h1 {
     //   display: table-cell;
@@ -112,7 +112,7 @@
       li.icon {
         position: absolute;
         top: 77px;
-        right: 1rem;
+        right: 0rem;
         display: inline-block;
       }
     }
