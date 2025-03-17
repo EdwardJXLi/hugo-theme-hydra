@@ -4,7 +4,11 @@
 <body class="max-width mx-auto px3 ltr">
   <div class="content index py4">
 
+  {{ if .Site.Params.enableBlogCategoryHeaders }}
+  {{ partial "post-header.html" . }}
+  {{ else }}
   {{ partial "header.html" . }}
+  {{ end }}
 
   {{ if .IsSection }}
   <div id="archive">
