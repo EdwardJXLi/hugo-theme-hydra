@@ -38,13 +38,10 @@
           {{ $readTime }} minute read
         </div>
         {{ end }}
-        {{ if gt .Params.categories 0 }}
+        {{ if .Params.category }}
         <div class="article-category">
             <i class="fas fa-archive"></i>
-            {{ range $index, $value := .Params.categories }}
-            {{ if gt $index 0 }} {{ print ", " }} {{ end }}
-            <a class="category-link" href="{{ "/categories/" | relLangURL }}{{ $value | urlize }}">{{ $value }}</a>
-            {{ end }}
+            <a class="category-link" href="/{{ .Params.category | urlize }}">{{ .Params.category }}</a>
         </div>
         {{ end }}
         {{ if gt .Params.tags 0 }}

@@ -31,3 +31,4 @@ TODO
 - Made header global across all blog pages
 - Swapped tags page to use list format
 - Remove "Categories" property (plural)
+- Added "Category" property (singular)
