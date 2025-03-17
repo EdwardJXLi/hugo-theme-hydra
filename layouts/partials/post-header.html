@@ -1,14 +1,25 @@
 <header id="header">
   <a href="{{ .Site.BaseURL }}">
-  {{ if (isset .Site.Params "gravatar") }}
+  {{ if (isset .Params "categoryheaderlogo" ) }}
+  <div id="logo" style="background-image: url({{ .Params.categoryHeaderLogo | absURL }})"></div>
+  {{ else if (isset .Site.Params "gravatar") }}
     <div id="logo" style="background-image: url(https://www.gravatar.com/avatar/{{ md5 .Site.Params.gravatar }}?s=100&d=identicon)"></div>
   {{ else if (isset .Site.Params "logo") }}
     <div id="logo" style="background-image: url({{ .Site.Params.logo | absURL }})"></div>
   {{ else }}
     <div id="logo" style="background-image: url({{ "https://placehold.co/50x50" | absURL }})"></div>
   {{ end}}
+  
   <div id="title">
+    {{ if (isset .Params "categoryheadertitle" ) }}
+    <h1>{{ .Params.categoryHeaderTitle }}</h1>
+    {{ else }}
     <h1>{{ .Site.Title }}</h1>
+    {{ end }}
+
+    {{ if (isset .Params "categoryheadersubtitle" ) }}
+    <h2 id="subtitle">{{ .Params.categoryHeaderSubtitle }}</h2>
+    {{ end }}
   </div>
   </a>
   <div id="nav">
@@ -18,9 +29,9 @@
       </li>
       <li><a href="/"><i class="fas fa-home"></i> Blog Home</a></li>
       {{ if .Params.categoryTitle }}
-      <li><a href="/"><i class="fas fa-writing"></i>More {{ .Params.categoryTitle }} Posts</a></li>
+      <li><a href="/{{ .Params.category }}"><i class="fas fa-writing"></i>More {{ .Params.categoryTitle }} Posts</a></li>
       {{ else }}
-      <li><a href="/"><i class="fas fa-writing"></i>More {{ .Params.category | title }} Posts</a></li>
+      <li><a href="/{{ .Params.category }}"><i class="fas fa-writing"></i>More {{ .Params.category | title }} Posts</a></li>
       {{ end }}
     </ul>
     <hr>

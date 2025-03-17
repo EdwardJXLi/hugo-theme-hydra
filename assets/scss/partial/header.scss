@@ -34,6 +34,13 @@
       -webkit-filter: grayscale(100%);
     }
   }
+
+  #subtitle {
+    margin: 0;
+    float: left;
+    margin-top: -5px;
+    margin-right: 1rem;
+  }
   #nav {
     color: $color-accent-1;
     letter-spacing: .01em;
@@ -88,10 +95,10 @@
     display: table;
     margin-right: 5rem;
     min-height: $logo-height;
-    h1 {
-      display: table-cell;
-      vertical-align: middle;
-    }
+    // h1 {
+    //   display: table-cell;
+    //   vertical-align: middle;
+    // }
   }
   #header #nav {
     ul {
