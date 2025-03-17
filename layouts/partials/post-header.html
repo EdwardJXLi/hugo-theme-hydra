@@ -18,7 +18,7 @@
     {{ end }}
 
     {{ if (isset .Params "categoryheadersubtitle" ) }}
-    <h2 id="subtitle">{{ .Params.categoryHeaderSubtitle }}</h2>
+    <a href="/{{ .Params.category }}"><h2 id="subtitle">{{ .Params.categoryHeaderSubtitle }}</h2></a>
     {{ end }}
   </div>
   </a>
