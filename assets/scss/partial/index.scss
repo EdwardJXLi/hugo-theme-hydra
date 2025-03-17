@@ -12,6 +12,10 @@
       min-width: 100px;
       color: $color-meta;
       font-size: 14px;
+
+      a {
+        color: $color-meta;
+      }
     }
   }
 }

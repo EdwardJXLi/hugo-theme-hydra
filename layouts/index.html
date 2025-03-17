@@ -62,7 +62,7 @@
     <ul class="post-list">
       {{ range (.Paginate $mainPosts).Pages }}
         <li class="post-item">
-          <div class="meta"><span>[ {{ .Params.category }} ]</span></div>
+          <div class="meta"><span>[ <a href="/{{ .Params.category }}">{{ .Params.category }}</a> ]</span></div>
           <div class="meta"><time datetime="{{ time .Date }}" itemprop="datePublished">{{ .Date.Format $dataFormat }}</time></div>
           <span><a href="{{ .Permalink }}">{{ if .Title }} {{- .Title -}} {{ else }} {{- print "Untitled" -}}{{ end }}</a></span>
         </li>
@@ -79,7 +79,7 @@
       {{ end }}
       {{ range (first (.Scratch.Get "count") $mainPosts) }}
         <li class="post-item">
-          <div class="meta"><span>[ {{ .Params.category }} ]</span></div>
+          <div class="meta"><span>[ <a href="/{{ .Params.category }}">{{ .Params.category }}</a> ]</span></div>
           <div class="meta"><time datetime="{{ time .Date }}" itemprop="datePublished">{{ .Date.Format $dataFormat }}</time></div>
           <span><a href="{{ .Permalink }}">{{ if .Title }} {{- .Title -}} {{ else }} {{- print "Untitled" -}}{{ end }}</a></span>
         </li>
