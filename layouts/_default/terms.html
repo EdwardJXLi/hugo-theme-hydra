@@ -2,19 +2,21 @@
 <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
   <div class="content" itemprop="articleBody">
     {{ if (eq .Type "tags")}}
-    <div id="tag-cloud">
+    <div id="tags">
       {{ if (eq (len .Data.Terms) 0) }}
-      <div class="tag-cloud-title">
+      <div class="tag-list-title">
         No tags
       </div>
       {{ end }}
-      <div class="tag-cloud-tags">
-        {{ $AllRegularPagesCount := len .Site.RegularPages }}
-        {{ range $elem := .Data.Terms.Alphabetical }}
-        <a style="font-size: {{ (add 0.8 (mul 15 (div (float $elem.Count) $AllRegularPagesCount))) }}rem;" href="{{ $elem.Page.Permalink }}">
-          {{- .Page.Title -}}
-        </a>
-        {{ end }}
+      <div class="tag-list">
+        <ul class="tag-list">
+          {{ range .Data.Terms.Alphabetical }}
+          <li class="tag-list-item">
+            <a class="tag-list-link" href="{{ .Page.Permalink }}">{{ .Page.Title }}</a>
+            <span class="tag-list-count">{{ .Count }}</span>
+          </li>
+          {{ end }}
+        </ul>
       </div>
     </div>
     {{ else if (eq .Type "categories")}}

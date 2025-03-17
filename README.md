@@ -29,3 +29,4 @@ TODO
 - Disabled logo greyout
 - Swap logo image to use placeholder image
 - Made header global across all blog pages
+- Swapped tags page to use list format

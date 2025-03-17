@@ -11,3 +11,22 @@
     }
   }
 }
+
+#tags {
+  .tag-list-title {
+    color: $color-meta;
+  }
+  .tag-list {
+    .tag-list-item {
+      .tag-list-count {
+        color: $color-meta;
+      }
+      .tag-list-count:before {
+        content: " (";
+      }
+      .tag-list-count:after {
+        content: ")";
+      }
+    }
+  }
+}
