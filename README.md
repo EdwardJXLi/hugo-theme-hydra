@@ -1,5 +1,31 @@
-## Hydra - Hugo Theme
+# 🐲 Hydra - Hugo Theme 🎨
 
-A hugo theme for personal blog. Fork from hexo theme [cactus](https://github.com/probberechts/hexo-theme-cactus) created by @probberechts, initial hugo port by @monkeyWzr.
+Highly modified and customized version of the Hugo theme [cactus](https://github.com/monkeyWzr/hugo-theme-cactus) by @monkeyWzr, which is itself a fork from the Hexo theme [cactus](https://github.com/probberechts/hexo-theme-cactus) created by @probberechts.
+
+The primary goal of this fork is to introduce a "sub-blog" structure, where multiple topics or "categories" can co-under the same url.
+
+**Before:**
+- www.blog.com/posts/thing1
+- www.blog.com/posts/thing2
+- www.blog.com/posts/thing2.1
+
+**Now:**
+- www.blog.com/tech/thing1
+- www.blog.com/art/thing2
+- www.blog.com/art/thing2.1
+
+> ⚠️ WARNING: This theme differs from the traditional Hugo blog layout! Most likely your existing Hugo content will not render properly. Read more about this below.
 
 README is WIP. Please read the original README [here](/README.old.md).
+
+## Key Changes
+TODO
+
+## Misc Changes
+- Changes colors and themes
+- Removed example site and github workflows
+- Fix `resources.ToCSS` deprecation
+- Fix Google Analytics
+- Disabled logo greyout
+- Swap logo image to use placeholder image
+- Made header global across all blog pages
