@@ -35,3 +35,4 @@ TODO
 - Added "Category" property (singular)
 - Update FontAwesome
 - Customizable category icon
+- Move post-list to partial layout
