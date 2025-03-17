@@ -34,6 +34,7 @@ TODO
 - Swapped tags page to use list format
 - Remove "Categories" property (plural)
 - Added "Category" property (singular)
+- Add category name to post list
 - Update FontAwesome
 - Customizable category icon
 - Move post-list to partial layout
