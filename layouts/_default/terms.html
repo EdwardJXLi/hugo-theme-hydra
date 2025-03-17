@@ -19,25 +19,7 @@
         </ul>
       </div>
     </div>
-    {{ else if (eq .Type "categories")}}
-      <div id="categories">
-        {{ if (eq (len .Data.Terms) 0) }}
-        <div class="category-list-title">
-          No categories
-        </div>
-        {{ end }}
-        <div class="category-list">
-          <ul class="category-list">
-            {{ range .Data.Terms.Alphabetical }}
-            <li class="category-list-item">
-              <a class="category-list-link" href="{{ .Page.Permalink }}">{{ .Page.Title }}</a>
-              <span class="category-list-count">{{ .Count }}</span>
-            </li>
-            {{ end }}
-          </ul>
-        </div>
-      </div>
-      {{ end }}
+    {{ end }}
   </div>
 </article>
 {{ end }}
