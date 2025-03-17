@@ -1,7 +1,17 @@
 <footer id="footer">
   <div class="footer-left">
-    Copyright  &copy; {{ now.Format "2006" }} {{ if .Site.Copyright }} {{ print .Site.Copyright | markdownify }} {{ else }} {{ print .Site.Title }} {{ end }}
-  </div>
+    <span>
+      Copyright  &copy; {{ now.Format "2006" }} {{ if .Site.Copyright }} {{ print .Site.Copyright | markdownify }} {{ else }} {{ print .Site.Title }} {{ end }}
+    </span>
+    <span>
+      |
+    </span>
+    {{ if .Site.Params.themefooter }}
+    <span>
+      Powered by <a href="https://github.com/EdwardJXLi/hugo-theme-hydra">Hydra</a> theme for <a href="https://gohugo.io/">Hugo</a>
+    </span>
+    {{ end }}
+    </div>
   <div class="footer-right">
     <nav>
       <ul>
