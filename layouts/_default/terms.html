@@ -1,6 +1,6 @@
 {{ define "main" }}
 <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-  <h1>{{ .Title | title }} </h1>
+  <h1 id="section-title">{{ .Title | title }} </h1>
   <div class="content" itemprop="articleBody">
     {{ if (eq .Type "tags")}}
     <div id="tags">

@@ -9,9 +9,9 @@
   {{ if .IsSection }}
   <div id="archive">
     {{ if .Params.categoryTitle }}
-    <h1>{{ .Params.categoryTitle }}</h1>
+    <h1 id="section-title">{{ .Params.categoryTitle }}</h1>
     {{ else }}
-    <h1>{{ .Section | title }} </h1>
+    <h1 id="section-title">{{ .Section | title }} </h1>
     {{ end }}
 
     {{ partial "post-list.html" . }}
