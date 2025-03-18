@@ -1,7 +1,9 @@
 <header id="header">
-  <a href="/{{ .Params.category }}">
+  <a href="/">
   {{ if (isset .Params "categoryheaderlogo" ) }}
-  <div id="logo" style="background-image: url({{ .Params.categoryHeaderLogo | absURL }})"></div>
+  <a href="/{{ .Params.category }}">
+    <div id="logo" style="background-image: url({{ .Params.categoryHeaderLogo | absURL }})"></div>
+  </a>
   {{ else if (isset .Site.Params "gravatar") }}
     <div id="logo" style="background-image: url(https://www.gravatar.com/avatar/{{ md5 .Site.Params.gravatar }}?s=100&d=identicon)"></div>
   {{ else if (isset .Site.Params "logo") }}
