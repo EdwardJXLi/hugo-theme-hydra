@@ -42,3 +42,45 @@
     }
   }
 }
+#category-select {
+  color: $color-accent-1;
+  letter-spacing: .01em;
+  font-weight: 200;
+  font-style: normal;
+  font-size: .8rem;
+  margin-bottom: 1.5rem;
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    line-height: 15px;
+
+    a {
+      margin-right: 15px;
+      color: $color-accent-1;
+      background-image: none;
+    }
+    a:hover {
+      @include underline(5px, $color-accent-1);
+    }
+    li {
+      display: inline-block;
+      margin-right: 8px;
+      border-right: 1px dotted;
+      border-color: $color-accent-1;
+      vertical-align: middle;
+    }
+    .icon {
+      display: none;
+    }
+    li:last-child {
+      margin-right: 0;
+      border-right: 0;
+
+      a {
+        margin-right: 0;
+      }
+    }
+  }
+}

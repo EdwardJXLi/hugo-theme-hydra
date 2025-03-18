@@ -36,6 +36,7 @@ TODO
 - Remove "Categories" property (plural)
 - Added "Category" property (singular)
 - Add category name to post list
+- Add `displayCategories` section to home
 - Update FontAwesome
 - Customizable category icon
 - Move post-list to partial layout
