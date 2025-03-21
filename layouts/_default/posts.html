@@ -1,24 +1,28 @@
 {{ define "main" }}
 
+<h1 id="section-title">All Posts</h1>
+
 {{ .Content }}
 
 {{ $pages := (sort ( where site.RegularPages "Type" "in" site.Params.mainSections ) "Date" "desc") }}
 
-<ul class="post-list">
-    {{ range (sort $pages "Date" "desc") }}
-        {{ $pageYear := (.Date.Format "2006") }}
-        {{ if (ne $pageYear ($.Scratch.Get "year")) }}
-        {{ $.Scratch.Set "year" $pageYear }}
-        <h2>{{ $pageYear }}</h2>
+<div id="archive">
+    <ul class="post-list">
+        {{ range (sort $pages "Date" "desc") }}
+            {{ $pageYear := (.Date.Format "2006") }}
+            {{ if (ne $pageYear ($.Scratch.Get "year")) }}
+            {{ $.Scratch.Set "year" $pageYear }}
+            <h2>{{ $pageYear }}</h2>
+            {{ end }}
+            <li class="post-item">
+            <div class="meta"><span>[ <a href="/{{ .Params.category }}">{{ .Params.category }}</a> ]</span></div>
+            <div class="meta"><time datetime="{{ time .Date }}" itemprop="datePublished">{{ .Date.Format (.Site.Params.dateFormat | default "2006-01-02") }}</time></div>
+            <span>    
+                <a class="" href="{{ .Permalink }}">{{ if .Title }} {{ .Title }} {{ else }} Untitled {{ end }}</a>
+            </span>
+            </li>
         {{ end }}
-        <li class="post-item">
-        <div class="meta"><span>[ <a href="/{{ .Params.category }}">{{ .Params.category }}</a> ]</span></div>
-        <div class="meta"><time datetime="{{ time .Date }}" itemprop="datePublished">{{ .Date.Format (.Site.Params.dateFormat | default "2006-01-02") }}</time></div>
-        <span>    
-            <a class="" href="{{ .Permalink }}">{{ if .Title }} {{ .Title }} {{ else }} Untitled {{ end }}</a>
-        </span>
-        </li>
-    {{ end }}
-</ul>
+    </ul>
+</div>
 
 {{ end }}
