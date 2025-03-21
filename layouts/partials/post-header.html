@@ -36,9 +36,9 @@
       </li>
       <li><a href="/"><i class="fas fa-home"></i> Blog Home</a></li>
       {{ if .Params.categoryTitle }}
-      <li><a href="/{{ .Params.category }}"><i class="fas fa-writing"></i>More {{ .Params.categoryTitle }} Posts</a></li>
+      <li><a href="/{{ .Params.category }}"><i class="fas fa-writing"></i>More {{ .Params.categoryTitle }}</a></li>
       {{ else }}
-      <li><a href="/{{ .Params.category }}"><i class="fas fa-writing"></i>More {{ .Params.category | title }} Posts</a></li>
+      <li><a href="/{{ .Params.category }}"><i class="fas fa-writing"></i>More {{ .Params.category | title }}</a></li>
       {{ end }}
     </ul>
     <hr>
