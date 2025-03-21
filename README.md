@@ -43,3 +43,4 @@ TODO
 - Added default post-list rendering for post layout
 - Add titles to list and terms layout
 - Added hr bar to title
+- Added 404 Page
