@@ -18,7 +18,7 @@
         <a class="" href="{{ .Permalink }}">{{ if .Title }} {{ .Title }} {{ else }} Untitled {{ end }}</a>
     </span>
     </li>
-    {{ end }}
+{{ end }}
 </ul>
 {{ if not .Site.Params.showAllPostsArchive }}
     {{ partial "pagination.html" . }}
