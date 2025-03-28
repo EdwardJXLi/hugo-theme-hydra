@@ -2,7 +2,7 @@
 
 Highly modified and customized version of the **Hugo theme [cactus](https://github.com/monkeyWzr/hugo-theme-cactus)** by **@monkeyWzr**, which is itself a fork from the **Hexo theme [cactus](https://github.com/probberechts/hexo-theme-cactus)** created by **@probberechts**.
 
-The primary goal of this fork is to implement a "mini-blog" layout (interally called `category`), where multiple topics or "categories" can co-exist under the same url. (similar to the "sports" vs the "tech" section of the newspaper)
+The primary goal of this fork is to implement a "mini-blog" layout (internally called `category`), where multiple topics or "categories" can co-exist under the same URL (similar to the "sports" vs the "tech" section of a newspaper).
 
 **Before:**
 - www.blog.com/posts/aaa
@@ -49,7 +49,7 @@ The new blog layout is as follows:
 │   │   ├── ccc.md
 │   │   ├── ddd.md
 │   │   └── icon.png * (new, optional)
-│   ├── tech *
+│   ├── music *
 │   │   ├── _index.md * (new)
 │   │   ├── eee.md
 │   │   └── icon.png * (new, optional)
@@ -75,12 +75,12 @@ The primary change is the addition of the `_index.md` which dictates the metadat
 - `layout = "post"` is required to select the post-specific rendering layout. 
 - `category` field is required for determining the category name. 
 - `categoryIcon` field is optional.
-- `categoryTitle` field is optional. By default its the category name capitalized. (i.e. `tech` -> `Tech`)
+- `categoryTitle` field is optional. By default, it's the category name capitalized. (i.e. `tech` -> `Tech`)
 - `categoryHeaderLogo` changes the header logo if `enableBlogCategoryHeaders` is enabled in `[params]`.
-- `categoryHeaderLogo` changes the header title if `enableBlogCategoryHeaders` is enabled in `[params]`.
-- `categoryHeaderLogo` changes the header subtitle if `enableBlogCategoryHeaders` is enabled in `[params]`.
+- `categoryHeaderTitle` changes the header title if `enableBlogCategoryHeaders` is enabled in `[params]`.
+- `categoryHeaderSubtitle` changes the header subtitle if `enableBlogCategoryHeaders` is enabled in `[params]`.
 
-There also some additional changes and new parameters to `hugo.toml`:
+There are also some additional changes and new parameters to `hugo.toml`:
 - `mainSections` has to list ALL the sections/categories in the blog. (by default only the first one is picked up)
 - `displayCategories` parameter is optional. It dictates which categories to hotlink in the posts list.
 - `enableBlogCategoryHeaders` parameter is optional. It enables or disables the custom per-category blog header.
@@ -107,7 +107,7 @@ layout: "posts"  # Important!
 - Adjusted SCSS/CSS styling
 - Added hr bar to title
 - Added global header across all blog pages
-- Swaped default logo image to use placeholder image
+- Swapped default logo image to use placeholder image
 - Disabled logo greyout
 - Swapped `tags` page to use list format
 - Added titles to `list` and `terms` layout
@@ -116,7 +116,7 @@ layout: "posts"  # Important!
 ### Misc Changes
 - Fixed `resources.ToCSS` deprecation
 - Fixed Google Analytics
-- Removed example site and github workflows
+- Removed example site and GitHub workflows
 - Updated FontAwesome
 - Moved `post-list` to `partial` layout
 - Added default `post-list` rendering for post layout
@@ -124,25 +124,25 @@ layout: "posts"  # Important!
 
 ## Install
 
-1. clone hydra to your hugo site's `themes` folder.
+1. Clone hydra to your Hugo site's `themes` folder.
 ```
 git clone https://github.com/EdwardJXLi/hugo-theme-hydra.git themes/hydra
 ```
 
-2. change your theme to hydra in your site config
+2. Change your theme to hydra in your site config
 ```toml
 # config.toml
 
 theme = "hydra"
 ```
 
-3. config your site. See [Config] or a [complete config sample](exampleSite/config.toml)
-4. test your site
+3. Config your site. See [Config] or a [complete config sample](exampleSite/config.toml)
+4. Test your site
 ```
 hugo server
 ```
 
-5. publish your site in your prefered way. See hugo's doc: [Hosting & Deployment](https://gohugo.io/hosting-and-deployment/)
+5. Publish your site in your preferred way. See Hugo's doc: [Hosting & Deployment](https://gohugo.io/hosting-and-deployment/)
 
 ## Config
 
@@ -195,17 +195,17 @@ weight = 4
 ```toml
 [params]
 
-  description = "Hugo is a general-purpose website framework. Technically speaking, Hugo is a static site generator. Unlike systems that dynamically build a page with each visitor request, Hugo builds pages when you create or update your content. Since websites are viewed far more often than they are edited, Hugo is designed to provide an optimal viewing experience for your website’s end users and an ideal writing experience for website authors."
+  description = "Hugo is a general-purpose website framework. Technically speaking, Hugo is a static site generator. Unlike systems that dynamically build a page with each visitor request, Hugo builds pages when you create or update your content. Since websites are viewed far more often than they are edited, Hugo is designed to provide an optimal viewing experience for your website's end users and an ideal writing experience for website authors."
 ```
 
-* set your main section (used as the link for the "writings" title on the homepage)
+* Set your main section (used as the link for the "writings" title on the homepage)
 
 ```toml
 [params]
   mainSection = "posts"
 ```
 
-* change the default main section title from Writings, to something else:
+* Change the default main section title from Writings, to something else:
 
 ```toml
 [params]
@@ -219,7 +219,7 @@ weight = 4
   showAllPostsOnHomePage = false
   postsOnHomePage = 5
 ```
-* show all posts
+* Show all posts
 
 ```toml
 [params]
@@ -227,21 +227,21 @@ weight = 4
   postsOnHomePage = 5 # this option will be ignored
 ```
 
-* show tagsoverview (default) or not
+* Show tags overview (default) or not
 * 
 ```toml
 [params]
   tagsOverview = true
 ```
 
-* display the table of contents inline on blog posts, rather than as part of the navigation menu:
+* Display the table of contents inline on blog posts, rather than as part of the navigation menu:
 
 ```toml
 [params]
   tocInline = true
 ```
 
-* show projects list (default) or not.
+* Show projects list (default) or not.
 
 ```toml
 [params]
@@ -253,10 +253,10 @@ Projects section will not be shown if no data file is detected. See [Projects li
 
 ### Projects list
 
-Create your projects data file `data/projects.yaml|toml|json`. Hugo support yaml, toml and json formats.
-for former hexo cactus users: please assign your json array to a `list` key.
+Create your projects data file `data/projects.yaml|toml|json`. Hugo supports yaml, toml and json formats.
+For former hexo cactus users: please assign your json array to a `list` key.
 
-for example, `data/projects.json`:
+For example, `data/projects.json`:
 ```json
 {
    "list": [
@@ -294,7 +294,7 @@ The `name` key expects the name of a [Font Awesome icon](https://fontawesome.com
 
 ### Copyright
 
-Assign your copy right to `.Site.Copyright`. Cactus will append current year to the head.
+Assign your copyright to `.Site.Copyright`. Cactus will append the current year to the head.
 
 TODO: Customizable copyright year
 
@@ -304,7 +304,7 @@ copyright = "Zeran Wu" # cactus theme will use site title if copyright is not se
 
 ### Comments
 
-Comments is disabled by default. Enable comments in your `.Site.Params`.
+Comments are disabled by default. Enable comments in your `.Site.Params`.
 ```toml
 [params]
   [params.comments]
@@ -312,12 +312,12 @@ Comments is disabled by default. Enable comments in your `.Site.Params`.
     # engine = "disqus" # in progress
 ```
 
-You can also enable/disable comments per post. in your posts' front matter, add:
+You can also enable/disable comments per post. In your posts' front matter, add:
 ```yaml
 comments: true
 ```
 
-The site config is ignored when `comments` option exists in front matter.
+The site config is ignored when the `comments` option exists in front matter.
 
 The default engine is disqus. **By now only disqus is supported in cactus.** I will add more options sooner or later. See [Comments Alternatives](https://gohugo.io/content-management/comments/#comments-alternatives)
 
@@ -327,11 +327,11 @@ Before using disqus, you need to register and get your [disqus shortname](https:
 disqusShortname = "wzr" # hydra will use site title if not set
 ```
 
-### highlight
+### Highlight
 
-Use hugo's built-in [syntax highlighting](https://gohugo.io/getting-started/configuration-markup#highlight).
+Use Hugo's built-in [syntax highlighting](https://gohugo.io/getting-started/configuration-markup#highlight).
 
-default config:
+Default config:
 
 ```toml
 [markup]
@@ -349,14 +349,14 @@ default config:
 
 ### Analytics
 
-Hydra uses hugo's bulit in analytics templates. Check [hugo's documents](https://gohugo.io/templates/internal#google-analytics) for details.
+Hydra uses Hugo's built-in analytics templates. Check [Hugo's documents](https://gohugo.io/templates/internal#google-analytics) for details.
 
-Set you tracking id in your site config.
+Set your tracking id in your site config.
 ```toml
 googleAnalytics = "UA-XXXXXXXX-XX" # or G-XXXXXXXX if you are using Google Analytics v4 (gtag.js)
 ```
 
-If you are using Google Analytics v3 (analytics.js), you can switch to asynchronous tracking by set `params.googleAnalyticsAsync` to `true`.
+If you are using Google Analytics v3 (analytics.js), you can switch to asynchronous tracking by setting `params.googleAnalyticsAsync` to `true`.
 ```toml
 [params]
 googleAnalyticsAsync = true # not required
@@ -364,20 +364,20 @@ googleAnalyticsAsync = true # not required
 
 ### RSS
 
-The rss feed is not generated by default. you can enable it in your site config:
+The RSS feed is not generated by default. You can enable it in your site config:
 
 ```toml
 [params]
   rss = true
 ```
 
-The rss link will be `https://example.com/index.xml` assuming your `baseURL` is set to `https://example.com/`
+The RSS link will be `https://example.com/index.xml` assuming your `baseURL` is set to `https://example.com/`
 
 Please also check [Configure RSS](https://gohugo.io/templates/rss/#configure-rss)
 
 ### Mathjax
 
-Hydra supports mathjax. Just add `mathjax` option in your site config:
+Hydra supports mathjax. Just add the `mathjax` option in your site config:
 ```toml
 [params]
   mathjax = true  # not required
@@ -388,7 +388,7 @@ You can also enable/disable mathjax per post. In your posts' front matter, add:
 mathjax: true # or false
 ```
 
-The site config will be ignored when `mathjax` option exists in front matter.
+The site config will be ignored when the `mathjax` option exists in front matter.
 
 ### Archive 
 Pagination on posts archive can be disabled to show all posts in chronological order
