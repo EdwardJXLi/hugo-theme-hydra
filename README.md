@@ -124,9 +124,9 @@ layout: "posts"  # Important!
 
 ## Install
 
-1. Clone hydra to your Hugo site's `themes` folder.
+1. Add hydra as a git submodule to your Hugo site's `themes` folder.
 ```
-git clone https://github.com/EdwardJXLi/hugo-theme-hydra.git themes/hydra
+git submodule add https://github.com/EdwardJXLi/hugo-theme-hydra.git themes/hydra
 ```
 
 2. Change your theme to hydra in your site config
