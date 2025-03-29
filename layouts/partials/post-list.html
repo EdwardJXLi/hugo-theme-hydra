@@ -1,7 +1,7 @@
 <ul class="post-list">
 
 {{ $pages := .Paginator.Pages }}
-{{ if .Site.Params.showAllPostsArchive }}
+{{ if or (not .Site.Params.showAllPostsArchive) (eq .Site.Params.showAllPostsArchive false) }}
     {{ $pages = .Pages }}
 {{ end }}
 
@@ -20,6 +20,6 @@
     </li>
 {{ end }}
 </ul>
-{{ if not .Site.Params.showAllPostsArchive }}
+{{ if not ( or (not .Site.Params.showAllPostsArchive) (eq .Site.Params.showAllPostsArchive false) ) }}
     {{ partial "pagination.html" . }}
 {{ end }}
