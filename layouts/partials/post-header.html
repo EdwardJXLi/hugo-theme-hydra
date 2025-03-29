@@ -1,34 +1,53 @@
 <header id="header">
-  <a href="/">
   {{ if (isset .Params "categoryheaderlogo" ) }}
   <a href="/{{ .Params.category }}">
     <div id="logo" style="background-image: url({{ .Params.categoryHeaderLogo | absURL }})"></div>
   </a>
   {{ else if (isset .Site.Params "gravatar") }}
+  <a href="/">
     <div id="logo" style="background-image: url(https://www.gravatar.com/avatar/{{ md5 .Site.Params.gravatar }}?s=100&d=identicon)"></div>
+  </a>
   {{ else if (isset .Site.Params "logo") }}
+  <a href="/">
     <div id="logo" style="background-image: url({{ .Site.Params.logo | absURL }})"></div>
+  </a>
   {{ else }}
+  <a href="/">
     <div id="logo" style="background-image: url({{ "https://placehold.co/50x50" | absURL }})"></div>
-  {{ end}}
+  </a>
+  {{ end }}
   
   <div id="title">
-      <a href="{{ .Site.BaseURL }}">
-      {{ if (isset .Params "categoryheadertitle" ) }}
-      <h1>{{ .Params.categoryHeaderTitle }}</h1>
-      {{ else }}
-      <h1>{{ .Site.Title }}</h1>
-      {{ end }}
-    </a>
-
     {{ if (isset .Params "categoryheadersubtitle" ) }}
+
+    {{ if (isset .Params "categoryheadertitle" ) }}
+    <a href="/{{ .Params.category }}">
+      <h1>{{ .Params.categoryHeaderTitle }}</h1>
+    </a>
+    {{ else }}
+    <a href="/">
+      <h1>{{ .Site.Title }}</h1>
+    </a>
+    {{ end }}
     <a href="/{{ .Params.category }}">
       <h2 id="subtitle">{{ .Params.categoryHeaderSubtitle }}</h2>
     </a>
+
+    {{ else }}
+
+    {{ if (isset .Params "categoryheadertitle" ) }}
+    <a id="main-title" href="/{{ .Params.category }}">
+      <h1>{{ .Params.categoryHeaderTitle }}</h1>
+    </a>
+    {{ else }}
+    <a id="main-title" href="/">
+      <h1>{{ .Site.Title }}</h1>
+    </a>
+    {{ end }}
+
     {{ end }}
     
   </div>
-  </a>
   <div id="nav">
     <ul>
       <li class="icon">

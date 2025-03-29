@@ -95,10 +95,10 @@
     display: table;
     margin-right: 3rem;
     min-height: $logo-height;
-    // h1 {
-    //   display: table-cell;
-    //   vertical-align: middle;
-    // }
+    #main-title {
+      display: table-cell;
+      vertical-align: middle;
+    }
   }
   #header #nav {
     ul {
