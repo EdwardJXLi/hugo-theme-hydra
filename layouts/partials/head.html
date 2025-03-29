@@ -54,5 +54,6 @@
   {{ end }}
   {{ if .Site.Params.plausibleDomain }}
   <script defer data-domain={{ .Site.Params.plausibleDomain }} data-api={{ .Site.Params.plausibleDataAPI }} src={{ .Site.Params.plausibleURL }} ></script>
+  <script>window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }</script>
   {{ end }}
 </head>
