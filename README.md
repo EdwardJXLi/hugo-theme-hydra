@@ -101,10 +101,13 @@ layout: "posts"  # Important!
 - Added `category` property (singular)
 - Added `category name` to post list
 - Added `displayCategories` section to home page rendering
+- Fixed MathJax support
+- Removed support for comments
 
 ### Theme Changes
 - Changed colors and themes
 - Adjusted SCSS/CSS styling
+- Added customizable favicon
 - Added hr bar to title
 - Added global header across all blog pages
 - Swapped default logo image to use placeholder image
@@ -114,9 +117,13 @@ layout: "posts"  # Important!
 - Added customizable category icon
 
 ### Misc Changes
+- Updated Hugo to 0.128.0
 - Fixed `resources.ToCSS` deprecation
 - Fixed Google Analytics
+- Added Plausible Analytics
 - Removed example site and GitHub workflows
+- Removed unnecessary & deprecated libs
+- Switched libs to use CDN
 - Updated FontAwesome
 - Moved `post-list` to `partial` layout
 - Added default `post-list` rendering for post layout
