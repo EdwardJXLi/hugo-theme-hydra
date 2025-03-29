@@ -108,7 +108,11 @@
 </body>
 
 <link rel="stylesheet" href={{ "/lib/font-awesome/css/all.min.css" | relURL }}>
-<script src={{ "/lib/jquery/jquery.min.js" | relURL }}></script>
+<script
+  src="https://code.jquery.com/jquery-3.7.1.min.js"
+  integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+  crossorigin="anonymous">
+</script>
 <script src={{ "/js/main.js" | relURL }}></script>
 {{ if not (isset site.Params "disablecopy") }}
 <script src={{ "js/code-copy.js"  | relURL }}></script>
