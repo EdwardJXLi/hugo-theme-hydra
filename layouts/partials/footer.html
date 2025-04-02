@@ -1,14 +1,14 @@
 <footer id="footer">
   <div class="footer-left">
     <span>
-      Copyright  &copy; {{ now.Format "2006" }} {{ if .Site.Copyright }} {{ print .Site.Copyright | markdownify }} {{ else }} {{ print .Site.Title }} {{ end }}
+      Copyright &copy; {{ now.Format "2006" }} {{ if .Site.Copyright }} {{ print .Site.Copyright | markdownify }} {{ else }} {{ print .Site.Title }} {{ end }}
     </span>
     <span>
       |
     </span>
     {{ if .Site.Params.themefooter }}
     <span>
-      Powered by <a href="https://github.com/EdwardJXLi/hugo-theme-hydra">Hydra</a> theme for <a href="https://gohugo.io/">Hugo</a>
+      Powered by <a href="https://github.com/EdwardJXLi/hugo-theme-hydra">Hydra</a> for <a href="https://gohugo.io/">Hugo</a>
     </span>
     {{ end }}
     </div>
