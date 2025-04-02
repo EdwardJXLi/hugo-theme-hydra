@@ -67,6 +67,7 @@ The primary change is the addition of the `_index.md` which dictates the metadat
   category = "tech"
   categoryIcon = "fa-gears"
   categoryTitle = "Technology Articles"
+  categoryDescription = "Articles about science, tech, and life. Curated for you."
   categoryHeaderLogo = "/tech/icon.png"
   categoryHeaderTitle = "Hydra Theme Demo"
   categoryHeaderSubtitle = "> Technology"
@@ -76,6 +77,7 @@ The primary change is the addition of the `_index.md` which dictates the metadat
 - `category` field is required for determining the category name. 
 - `categoryIcon` field is optional.
 - `categoryTitle` field is optional. By default, it's the category name capitalized. (i.e. `tech` -> `Tech`)
+- `categoryDescription` field is optional.
 - `categoryHeaderLogo` changes the header logo if `enableBlogCategoryHeaders` is enabled in `[params]`.
 - `categoryHeaderTitle` changes the header title if `enableBlogCategoryHeaders` is enabled in `[params]`.
 - `categoryHeaderSubtitle` changes the header subtitle if `enableBlogCategoryHeaders` is enabled in `[params]`.

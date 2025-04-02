@@ -21,6 +21,10 @@
     <h1 id="section-title">{{ .Section | title }} </h1>
     {{ end }}
 
+    {{ if .Params.categoryDescription }}
+    <p>{{ .Params.categoryDescription }}</p>
+    {{ end }}
+
     {{ partial "post-list.html" . }}
   </div>
   {{ else }}
