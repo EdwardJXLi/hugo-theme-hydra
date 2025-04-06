@@ -109,6 +109,7 @@ layout: "posts"  # Important!
 ### Theme Changes
 - Changed colors and themes
 - Adjusted SCSS/CSS styling
+- Added blockquote formatting
 - Added customizable favicon
 - Added hr bar to title
 - Added global header across all blog pages

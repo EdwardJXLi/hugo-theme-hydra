@@ -37,6 +37,17 @@ article {
       }
     }
   }
+  blockquote {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+    padding-inline-start: 40px;
+    padding-inline-end: 40px;
+    border-left: 5px solid $color-accent-1;
+    background-color: $color-background-shade;
+}
   .content img,
   .content video {
     display: block;
