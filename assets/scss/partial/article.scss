@@ -47,7 +47,27 @@ article {
     padding-inline-end: 40px;
     border-left: 5px solid $color-accent-1;
     background-color: $color-background-shade;
-}
+  }
+  q {
+    margin: 1rem 10px;
+    padding: .5em 10px;
+    background: inherit;
+    color: $color-quote;
+    quotes: "\201C" "\201D" "\2018" "\2019";
+    font-weight: bold;
+
+    p {
+      margin: 0;
+    }
+    &:before {
+      margin-right: .25em;
+      color: $color-quote;
+      content: "\201C";
+      vertical-align: -.4em;
+      font-size: 2em;
+      line-height: .1em;
+    }
+  }
   .content img,
   .content video {
     display: block;
