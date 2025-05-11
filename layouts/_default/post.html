@@ -34,6 +34,9 @@
       <h1 class="posttitle" itemprop="name headline">
         {{ .Title }}
       </h1>
+      {{ if .Params.subtitle }}
+        <p class="subtitle">{{ .Params.subtitle }}</p>
+      {{ end }}
       <div class="meta">
         {{ if (or (isset .Site "author") (isset .Site "title"))}}
         <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
