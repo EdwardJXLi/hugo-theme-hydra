@@ -83,6 +83,12 @@
             {{ end }}
         </div>
         {{ end }}
+        {{ if .Site.Params.rss }}
+        <div class="article-rss">
+          <i class="fas fa-rss"></i>
+          <a href="/index.xml" rel="rss">RSS</a>
+        </div>
+        {{ end }}
       </div>
     </header>
 
