@@ -174,8 +174,8 @@ article {
   .tag-link {
     &:before {
       content: "#";
-      @include underline(10px, $color-link);
     }
+    @include underline(10px, $color-link);
   }
 }
 .article-category {
