@@ -92,15 +92,6 @@
       </div>
     </header>
 
-  {{ with .Resources.ByType "image" }}
-    <div class="article-gallery">
-      {{ range $index, $value := . }}
-      <a class="gallery-item" href="{{ .RelPermalink }}" rel="gallery_{{ $index }}">
-          <img src="{{ .RelPermalink }}" itemprop="image" />
-      </a>
-      {{ end }}
-    </div>
-  {{ end }}
     {{ if .Site.Params.tocInline }}
     <div id="toc">
       {{ .TableOfContents }}

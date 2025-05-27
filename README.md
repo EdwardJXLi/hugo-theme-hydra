@@ -105,6 +105,7 @@ layout: "posts"  # Important!
 - Added `displayCategories` section to home page rendering
 - Fixed MathJax support
 - Removed support for comments
+- Removed justified gallery
 
 ### Theme Changes
 - Changed colors and themes
