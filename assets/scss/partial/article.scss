@@ -55,7 +55,8 @@ article {
     border-left: 5px solid $color-accent-1;
     background-color: $color-background-shade;
   }
-  q {
+  q,
+  quote {
     margin: 1rem 10px;
     padding: .5em 10px;
     background: inherit;
